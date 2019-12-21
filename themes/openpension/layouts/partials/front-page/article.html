@@ -20,47 +20,48 @@
                     <div class="col-12">
                         <div id="content-types">
                             <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-                                <li class="nav-item active">
-                                    <a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab"
-                                       aria-controls="second" aria-selected="false">החזקות במניות</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="third-tab" data-toggle="tab" href="#third" role="tab"
-                                       aria-controls="third" aria-selected="false">אלוקציה</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="first-tab" data-toggle="tab" href="#first"
-                                       role="tab" aria-controls="first" aria-selected="true">ניתוח ביצועים</a>
-                                </li>
+
+                                {{range $index, $element := .sheets}}
+
+                                    {{ $class := "nav-item" }}
+
+                                        {{ if eq $index 0}}
+                                            {{ $class = "nav-item active" }}
+                                        {{ end }}
+
+                                        <li class="{{$class}}">
+                                            <a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab"
+                                               aria-controls="second" aria-selected="false">{{$element.title}}</a>
+                                        </li>
+                                {{end}}
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
         <div id="homepage-content" class="container-fluid">
             <div>
                 <div class="row">
                     <div class="col-12">
                         <div class="tab-content">
-                            <div class="tab-pane active" id="second" role="tabpanel" aria-labelledby="second-tab">
-                                <iframe width="100%" height="1000"
-                                        src="https://app.powerbi.com/view?r=eyJrIjoiNDMzNDhkOGEtOGNiMi00MjU5LTkyODMtNjhiYjc3YjJlMGZkIiwidCI6ImU2MjgyMmM4LTljMzAtNGUyNC05NWQ2LWEwMjNjMjY1MjA4MSIsImMiOjl9"
-                                        frameborder="0" allowfullscreen="true">
-                                </iframe>
-                            </div>
-                            <div class="tab-pane" id="third" role="tabpanel" aria-labelledby="third-tab">
-                                <iframe width="100%" height="1000"
-                                        src="https://app.powerbi.com/view?r=eyJrIjoiOWExMjQ1MjUtNjA0ZS00ZTMxLTkxN2YtOWFmZGM4MzNkNTcxIiwidCI6ImU2MjgyMmM4LTljMzAtNGUyNC05NWQ2LWEwMjNjMjY1MjA4MSIsImMiOjl9"
-                                        frameborder="0" allowfullscreen="true">
-                                </iframe>
-                            </div>
-                            <div class="tab-pane" id="first" role="tabpanel" aria-labelledby="first-tab">
-                                <iframe width="100%" height="1000"
-                                        src="https://app.powerbi.com/view?r=eyJrIjoiNjNhMTk1ZGQtMGU4ZS00MjQ5LWI5YWQtNDQ5NWRiZmE1YTRmIiwidCI6ImU2MjgyMmM4LTljMzAtNGUyNC05NWQ2LWEwMjNjMjY1MjA4MSIsImMiOjl9"
-                                        frameborder="0" allowfullscreen="true">
-                                </iframe>
-                            </div>
+                            {{range $index, $element := .sheets}}
+
+                                {{ $class := "tab-pane" }}
+
+                                {{ if eq $index 0}}
+                                    {{ $class = "tab-pane active" }}
+                                {{ end }}
+
+                                <div class="{{$class}}" id="second" role="tabpanel" aria-labelledby="second-tab">
+
+                                    <iframe width="100%" height="1000" src="{{$element.url}}" frameborder="0" allowfullscreen="true">
+                                    </iframe>
+
+                                </div>
+                            {{end}}
                         </div>
 
                         <div id="homepage-links">

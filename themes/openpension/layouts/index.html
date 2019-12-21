@@ -22,9 +22,9 @@
     </head>
 
     <body>
-        {{ partial "front-page/navigation.html" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "פנסיה פתוחה" ) }}
-        {{ partial "front-page/article.html" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "פנסיה פתוחה" ) }}
-        {{ partial "front-page/footer.html" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "פנסיה פתוחה" ) }}
+        {{ partial "front-page/navigation.html" }}
+        {{ partial "front-page/article.html" (dict "sheets" .Site.Data.sheets) }}
+        {{ partial "front-page/footer.html" }}
     </body>
 
 </html>
