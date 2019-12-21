@@ -1,8 +1,11 @@
 - title: "החזקות במניות"
+  position: "first"
   url: "https://app.powerbi.com/view?r=eyJrIjoiNDMzNDhkOGEtOGNiMi00MjU5LTkyODMtNjhiYjc3YjJlMGZkIiwidCI6ImU2MjgyMmM4LTljMzAtNGUyNC05NWQ2LWEwMjNjMjY1MjA4MSIsImMiOjl9"
 
 - title: "אלוקציה"
+  position: "second"
   url: "https://app.powerbi.com/view?r=eyJrIjoiOWExMjQ1MjUtNjA0ZS00ZTMxLTkxN2YtOWFmZGM4MzNkNTcxIiwidCI6ImU2MjgyMmM4LTljMzAtNGUyNC05NWQ2LWEwMjNjMjY1MjA4MSIsImMiOjl9"
 
 - title: "ניתוח ביצועים"
+  position: "third"
   url: "https://app.powerbi.com/view?r=eyJrIjoiNjNhMTk1ZGQtMGU4ZS00MjQ5LWI5YWQtNDQ5NWRiZmE1YTRmIiwidCI6ImU2MjgyMmM4LTljMzAtNGUyNC05NWQ2LWEwMjNjMjY1MjA4MSIsImMiOjl9"
