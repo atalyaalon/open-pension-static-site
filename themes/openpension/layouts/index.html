@@ -11,7 +11,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="icon" type="image/x-icon" href="/images/pension-logo.ico">
+        {{ $icon := resources.Get "images/pension-logo.ico" }}
+        <link rel="icon" type="image/x-icon" href="{{$icon}}">
         {{ partial "fonts" }}
         {{ partial "ga" }}
 
@@ -20,7 +21,7 @@
     </head>
 
     <body>
-        {{ partial "front-page/navigation.html" }}
+        {{ partial "front-page/navigation.html" (dict "image" $logo.Permalink ) }}
         {{ partial "front-page/sheets.html" (dict "sheets" .Site.Data.sheets) }}
         {{ partial "front-page/footer.html" }}
 
