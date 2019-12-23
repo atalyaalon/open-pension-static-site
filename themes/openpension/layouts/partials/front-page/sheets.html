@@ -1,0 +1,63 @@
+<article id="content">
+    <div>
+        <div id="homepage-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="jumbotron">
+
+                            <p style="font-size: 1.25em;">
+                                פנסיה פתוחה, מבית הסדנא לידע ציבורי, מפתחת כלי FININT (Financial Intelligence)
+                                מבוססי Power BI
+                                לניתוח תיקי ההשקעות באפיקי החיסכון לטווח בינוני ארוך (פנסיה, גמל, ביטוח מנהלים).
+                            </p>
+
+                            <p style="font-size: 1.25em;">הכלים באתר זה מונגשים לתועלת הציבור בלבד.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="content-types">
+                            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                                {{range $index, $sheet := .sheets}}
+
+                                    {{ $class := "link" }}
+
+                                        {{ if eq $index 0}}
+                                            {{ $class = " selected" }}
+                                        {{ end }}
+
+                                        <li class="{{$class}}">
+                                            <a id="{{$sheet.position}}-tab" data-toggle="tab" href="{{$sheet.url}}" target="sheet_frame" role="tab"
+                                               aria-controls="{{$sheet.position}}" aria-selected="false">{{$sheet.title}}</a>
+                                        </li>
+                                {{end}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="homepage-content" class="container-fluid">
+            <div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tab-content">
+                            {{$sheet := index .sheets 0}}
+                            <iframe width="100%" height="1000" src="{{$sheet.url}}" name="sheet_frame" frameborder="0" allowfullscreen="true">
+                            </iframe>
+                        </div>
+
+                        <div id="homepage-links">
+                            <p>השימוש באתר באתר זה אינו מהווה ייעוץ/שיווק השקעות ו/או ייעוץ/שיווק פנסיוני ו/או תחליף
+                                לייעוץ/שיווק
+                                כאמור המתחשב בנתונים ובצרכים המיוחדים של כל אדם.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

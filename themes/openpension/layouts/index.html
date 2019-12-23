@@ -11,6 +11,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <link rel="icon" type="image/x-icon" href="/images/pension-logo.ico">
         {{ partial "fonts" }}
         {{ partial "ga" }}
 
@@ -19,9 +20,12 @@
     </head>
 
     <body>
-        {{ partial "front-page/navigation.html" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "פנסיה פתוחה" ) }}
-        {{ partial "front-page/article.html" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "פנסיה פתוחה" ) }}
-        {{ partial "front-page/footer.html" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "פנסיה פתוחה" ) }}
+        {{ partial "front-page/navigation.html" }}
+        {{ partial "front-page/sheets.html" (dict "sheets" .Site.Data.sheets) }}
+        {{ partial "front-page/footer.html" }}
+
+        {{ $sheets_switcher := resources.Get "js/SheetSwitch.js" | resources.Minify | resources.Fingerprint }}
+        <script src="{{ $sheets_switcher.Permalink }}"></script>
     </body>
 
 </html>

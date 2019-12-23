@@ -1,0 +1,24 @@
+footer {
+    position: absolute;
+    clear: both;
+    width: 100%;
+    line-height: 50px;
+    background-color: #333;
+    color: #fff;
+
+    a {
+        color: white;
+        text-decoration: underline;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    ul {
+        margin: 0;
+        li {
+            padding-right: 1em;
+        }
+    }
+}

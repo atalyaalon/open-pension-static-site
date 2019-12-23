@@ -11,4 +11,9 @@ body {
     font-size: 16px;
     direction: rtl;
     text-align: right;
+    font-family: 'Alef', sans-serif;
 }
+
+@import "header";
+@import "sheets.scss";
+@import "footer";
