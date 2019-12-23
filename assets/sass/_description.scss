@@ -33,9 +33,21 @@
                     border-radius: 0;
                     border: none;
 
-                    &.active a {
-                        background-color: #3b70bf;
-                        color: #fff;
+                    &.selected {
+                        margin-top: -6px;
+
+                        a {
+                            background-color: #3b70bf;
+                            color: #fff;
+                            border-bottom: none;
+                            border-color: #3b70bf;
+                            padding: .5em 1em 9px;
+                            border-radius: .2em .2em 0 0;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
                     }
                 }
             }

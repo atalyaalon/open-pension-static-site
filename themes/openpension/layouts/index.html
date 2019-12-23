@@ -13,7 +13,6 @@
         <link href="https://fonts.googleapis.com/css?family=Alef:400,700&display=swap&subset=hebrew" rel="stylesheet">
 
         <link rel="icon" type="image/x-icon" href="/images/pension-logo.ico">
-
         {{ partial "fonts" }}
         {{ partial "ga" }}
 
@@ -25,6 +24,9 @@
         {{ partial "front-page/navigation.html" }}
         {{ partial "front-page/article.html" (dict "sheets" .Site.Data.sheets) }}
         {{ partial "front-page/footer.html" }}
+
+        {{ $sheets_switcher := resources.Get "js/SheetSwitch.js" | resources.Minify | resources.Fingerprint }}
+        <script src="{{ $sheets_switcher.Permalink }}"></script>
     </body>
 
 </html>

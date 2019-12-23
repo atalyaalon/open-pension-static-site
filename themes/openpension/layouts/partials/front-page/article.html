@@ -22,14 +22,14 @@
                             <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                                 {{range $index, $sheet := .sheets}}
 
-                                    {{ $class := "nav-item" }}
+                                    {{ $class := "link" }}
 
                                         {{ if eq $index 0}}
-                                            {{ $class = "nav-item active" }}
+                                            {{ $class = " selected" }}
                                         {{ end }}
 
                                         <li class="{{$class}}">
-                                            <a class="nav-link" id="{{$sheet.position}}-tab" data-toggle="tab" href="{{$sheet.url}}" target="sheet_frame" role="tab"
+                                            <a id="{{$sheet.position}}-tab" data-toggle="tab" href="{{$sheet.url}}" target="sheet_frame" role="tab"
                                                aria-controls="{{$sheet.position}}" aria-selected="false">{{$sheet.title}}</a>
                                         </li>
                                 {{end}}
@@ -39,7 +39,6 @@
                 </div>
             </div>
         </div>
-
 
         <div id="homepage-content" class="container-fluid">
             <div>
