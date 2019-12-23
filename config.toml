@@ -1,4 +1,4 @@
-baseURL = "https://hasadna.github.io/open-pension-static-site."
+baseURL = "https://hasadna.github.io/open-pension-static-site"
 languageCode = "il-he"
 title = "פנסיה פתוחה"
 theme = "openpension"
