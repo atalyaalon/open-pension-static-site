@@ -1,0 +1,20 @@
+language: go
+
+install:
+  - wget "https://github.com/gohugoio/hugo/releases/download/v0.61.0/hugo_0.61.0_Linux-64bit.deb"
+  - sudo dpkg -i hugo*.deb
+
+script:
+  - hugo version
+
+deploy:
+  provider: script
+  script: bash ./deploy.sh
+  on:
+    branch: master
+
+global:
+  - PRODUCTION=true
+  - secure: <a long string of random looking ASCII chars ending with an equal sign>
+  - secure: <another long ASCII string ending with an equal sign>
+  - secure: <and another long ASCII string ending with an equal sign>
