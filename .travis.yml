@@ -13,7 +13,7 @@ deploy:
 
 global:
   - PRODUCTION=true
-  - HUGO_RELEASE=v0.61.0
+  - HUGO_RELEASE=0.61.0
   - secure: <a long string of random looking ASCII chars ending with an equal sign>
   - secure: <another long ASCII string ending with an equal sign>
   - secure: <and another long ASCII string ending with an equal sign>
