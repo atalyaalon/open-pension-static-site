@@ -1,0 +1,37 @@
+<html lang="he" dir="rtl">
+
+<head>
+    <title>{{ .Site.Title }}</title>
+    {{ $bootstrap := resources.Get "sass/bootstrap.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $bootstrap.Permalink }}">
+
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{ $icon := resources.Get "images/pension-logo.ico" }}
+    <link rel="icon" type="image/x-icon" href="{{$icon}}">
+    {{ partial "fonts" }}
+    {{ partial "ga" }}
+
+    {{ $logo := resources.Get "images/pension-logo.png" }}
+    {{ partial "og" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "פנסיה פתוחה" ) }}
+</head>
+
+<body>
+{{ partial "front-page/navigation.html" (dict "image" $logo.Permalink ) }}
+
+<div class="container {{.Params.class}}">
+    <h1>{{ .Title }}</h1>
+
+    <div class="col-12 content">
+        {{.Content}}
+    </div>
+</div>
+
+{{ partial "front-page/footer.html" }}
+</body>
+
+</html>
