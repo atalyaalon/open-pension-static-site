@@ -12,9 +12,3 @@ deploy:
   script: bash ./deploy.sh
   on:
     branch: master
-
-global:
-  - PRODUCTION=true
-  - secure: <a long string of random looking ASCII chars ending with an equal sign>
-  - secure: <another long ASCII string ending with an equal sign>
-  - secure: <and another long ASCII string ending with an equal sign>
