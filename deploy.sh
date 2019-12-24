@@ -10,6 +10,6 @@ echo -e "\033[0;32mPassing CNAME to the doc folder\033[0m"
 git add .
 
 git commit -m "Updating site"
-git push origin master
+git push https://roysegall:$token@github.com/hasadna/open-pension-static-site/
 
 echo -e "\033[0;32mDone!\033[0m"
