@@ -1,27 +1,24 @@
-$orange1: #f7b75e;
-$blue1: #6acff1;
-$blue2: #0090c1;
-
-@mixin machineFont {
-  font-family: 'Poiret One', cursive;
-}
+@import "_variables";
 
 body {
-    background: white;
     font-size: 16px;
-    direction: rtl;
-    text-align: right;
-    font-family: 'Alef', sans-serif;
+    margin: 0;
+    font-family: 'Arimo', sans-serif;
 }
 
-.about-page, .privacy {
-    .content {
+#header {
+
+    .wrapper {
+        background: $header-bg;
         padding-top: 1em;
         padding-bottom: 1em;
-        font-size: 1.15em;
+        padding-right: $default-padding;
+        color: $header-color;
+        display: flex;
+        align-items: center;
+
+        .site-tittle {
+            font-size: 2em;
+        }
     }
 }
-
-@import "header";
-@import "sheets.scss";
-@import "footer";

@@ -1,0 +1,30 @@
+<html lang="he" dir="rtl">
+
+    <head>
+        <title>{{ .Site.Title }}</title>
+
+        {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {{ $icon := resources.Get "images/pension-logo.ico" }}
+        <link rel="icon" type="image/x-icon" href="{{$icon}}">
+        {{ partial "fonts" }}
+        {{ partial "ga" }}
+
+        {{ $logo := resources.Get "images/pension-logo.png" }}
+        {{ partial "og" (dict "title" .Site.Title "image" $logo.Permalink "type" "website" "description" "פנסיה פתוחה" ) }}
+    </head>
+
+    <body>
+        {{ partial "navigation.html" (dict "image" $logo.Permalink ) }}
+        {{ partial "front-page/home.html" (dict "sheets" .Site.Data.sheets) }}
+        {{ partial "footer.html" }}
+
+        {{ $sheets_switcher := resources.Get "js/SheetSwitch.js" | resources.Minify | resources.Fingerprint }}
+        <script src="{{ $sheets_switcher.Permalink }}"></script>
+    </body>
+
+</html>

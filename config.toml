@@ -1,5 +1,5 @@
 baseURL = "https://www.openpension.org.il"
 languageCode = "il-he"
 title = "פנסיה פתוחה"
-theme = "openpension"
+theme = "openpension-2.5"
 publishDir = "docs"
