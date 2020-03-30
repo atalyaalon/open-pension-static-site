@@ -111,53 +111,39 @@ section {
     }
 }
 
-.sheet-gird, .article-gird {
+.grid-display {
     display: grid;
     padding-top: 1.5em;
     grid-template-columns: auto auto auto;
 
-    .sheet-block {
+    div {
         padding: 1em 1em 1em 1.5em;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
         margin: 1.5em;
+    }
 
-        .title {
-            font-size: 2em;
-            color: $sheet-title;
-            margin: 0;
-            padding-bottom: 1em;
-        }
+    .title {
+        font-size: 2em;
+        color: $sheet-title;
+        margin: 0;
+        padding-bottom: 1em;
+    }
 
-        .sheet-image {
-            max-width: 100%;
+    img {
+        max-width: 100%;
+
+        &.bordered {
+            border: solid 1px $sheet-title;
         }
     }
 
-    .article-block {
-        padding: 1em 1em 1em 1.5em;
-        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-        background-color: #ffffff;
-        margin: 1.5em;
-
-        .title {
-            font-size: 2em;
-            color: $sheet-title;
-            margin: 0;
-        }
-
-        .sub-title {
-            padding-top: .25em;
-            font-size: 1.25em;
-            color: $sheet-title;
-            margin: 0;
-            padding-bottom: 1em;
-        }
-
-        .article-image {
-            max-width: 100%;
-            border: solid 1px $sheet-title;
-        }
+    .sub-title {
+        padding-top: .25em;
+        font-size: 1.25em;
+        color: $sheet-title;
+        margin: 0;
+        padding-bottom: 1em;
     }
 }
 
