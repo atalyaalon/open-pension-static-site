@@ -23,16 +23,17 @@
 
         {{ $money_background := resources.Get "images/money-background.png" }}
         {{ $tools_background := resources.Get "images/tools-background.png" }}
+
         {{ $sheet_image := resources.Get "images/first-sheet.png" }}
+
         {{ $article_image := resources.Get "images/article.png" }}
         {{ $articles_image := resources.Get "images/articles.png" }}
 
-        {{ partial "front-page/home.html" (dict "money" $money_background.Permalink "tools" $tools_background.Permalink "sheetImage" $sheet_image.Permalink "articleImage" $article_image.Permalink "articles" $articles_image.Permalink) }}
+        {{ $about_us_image := resources.Get "images/aboutus.png" }}
+
+        {{ partial "front-page/home.html" (dict "money" $money_background.Permalink "tools" $tools_background.Permalink "sheetImage" $sheet_image.Permalink "articleImage" $article_image.Permalink "articles" $articles_image.Permalink "aboutus" $about_us_image.Permalink) }}
 
         {{ partial "footer.html" }}
-
-        {{ $sheets_switcher := resources.Get "js/SheetSwitch.js" | resources.Minify | resources.Fingerprint }}
-        <script src="{{ $sheets_switcher.Permalink }}"></script>
     </body>
 
 </html>

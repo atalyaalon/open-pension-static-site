@@ -5,7 +5,6 @@ body {
     font-family: 'Arimo', sans-serif;
     background: #f0f8fd;
     margin: 0;
-    margin-bottom: 1em;
 }
 
 header {
@@ -28,6 +27,7 @@ header {
 nav {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     position: relative;
+
     .wrapper {
        display: flex;
        justify-content: center;
@@ -48,17 +48,17 @@ nav {
 
 section {
     padding-right: $default-padding;
-    padding-top: 3.5em;
     color: $money-color;
     background-repeat: no-repeat;
     min-height: 40vh;
     background-size: contain;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     padding-bottom: 2em;
 
     h2 {
         font-size: 4em;
         margin: 0;
+        font-weight: normal;
     }
 
     .medium {
@@ -74,9 +74,39 @@ section {
     }
 
     &.money {
+        padding-top: 3.5em;
+
         .text {
             width: fit-content;
             margin-top: 5vh;
+        }
+    }
+
+    &.about-us {
+        .quarter-text {
+            font-size: 1.25em;
+            width: 20vw;
+        }
+
+        .contact-us {
+            padding-top: 2em;
+
+            button {
+                width: 349px;
+                height: 45px;
+                border: none;
+                border-radius: 6px;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                background-color: #007ac1;
+                font-size: 20px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.15;
+                letter-spacing: normal;
+                text-align: center;
+                color: #fefeff;
+            }
         }
     }
 }
@@ -136,5 +166,15 @@ section {
             border: solid 1px $sheet-title;
         }
     }
+}
+
+footer {
+    background-color: #add9ff;
+    font-size: 1.25em;
+    height: 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
