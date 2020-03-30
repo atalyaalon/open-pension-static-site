@@ -21,8 +21,11 @@
     <body>
         {{ partial "navigation.html" (dict "image" $logo.Permalink ) }}
 
-        {{ $home_background := resources.Get "images/money-background.png" }}
-        {{ partial "front-page/home.html" (dict "image" $home_background.Permalink) }}
+        {{ $money_background := resources.Get "images/money-background.png" }}
+        {{ $tools_background := resources.Get "images/tools-background.png" }}
+        {{ $sheet_image := resources.Get "images/first-sheet.png" }}
+
+        {{ partial "front-page/home.html" (dict "money" $money_background.Permalink "tools" $tools_background.Permalink "sheetImage" $sheet_image.Permalink) }}
 
         {{ partial "footer.html" }}
 

@@ -2,9 +2,10 @@
 
 body {
     font-size: 16px;
-    margin: 0;
     font-family: 'Arimo', sans-serif;
     background: #f0f8fd;
+    margin: 0;
+    margin-bottom: 1em;
 }
 
 header {
@@ -50,27 +51,56 @@ section {
     padding-top: 3.5em;
     color: $money-color;
     background-repeat: no-repeat;
-    min-height: 45vh;
+    min-height: 40vh;
     background-size: contain;
+
+    h2 {
+        font-size: 4em;
+        margin: 0;
+    }
+
+    .medium {
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .big {
+        font-size: 2em;
+        margin: 0;
+        padding: 0;
+    }
 
     &.money {
         .text {
             width: fit-content;
             margin-top: 5vh;
-
-            h2 {
-                font-size: 4em;
-                margin-block-start: 0;
-                margin-block-end: 0;
-                margin-inline-start: 0;
-                margin-inline-end: 0;
-            }
-
-            p {
-                font-size: 2em;
-                margin: 0;
-                padding: 0;
-            }
         }
     }
 }
+
+.sheet-gird {
+    display: flex;
+    margin-left: 2em;
+    margin-top: 5vh;
+
+    .sheet-block {
+        margin-left: 3em;
+        padding: 1em 1em 1em 1.5em;
+        width: 22em;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+
+        .title {
+            font-size: 2em;
+            color: $sheet-title;
+            margin: 0;
+            padding-bottom: 1em;
+        }
+
+        .sheet-image {
+            max-width: 100%;
+        }
+    }
+}
+
