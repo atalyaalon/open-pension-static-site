@@ -111,17 +111,16 @@ section {
     }
 }
 
-.sheet-gird {
-    display: flex;
-    margin-left: 2em;
-    margin-top: 5vh;
+.sheet-gird, .article-gird {
+    display: grid;
+    padding-top: 1.5em;
+    grid-template-columns: auto auto auto;
 
     .sheet-block {
-        margin-left: 3em;
         padding: 1em 1em 1em 1.5em;
-        width: 22em;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
+        margin: 1.5em;
 
         .title {
             font-size: 2em;
@@ -134,18 +133,12 @@ section {
             max-width: 100%;
         }
     }
-}
-.article-gird {
-    display: flex;
-    margin-left: 2em;
-    margin-top: 5vh;
 
     .article-block {
-        margin-left: 3em;
         padding: 1em 1em 1em 1.5em;
-        width: 22em;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
+        margin: 1.5em;
 
         .title {
             font-size: 2em;
