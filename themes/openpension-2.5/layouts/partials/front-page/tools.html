@@ -1,0 +1,33 @@
+{{ $tools_background := resources.Get "images/tools-background.png" }}
+{{ $sheet_image := resources.Get "images/first-sheet.png" }}
+
+<section class="tools" style="background-image:url({{$tools_background}})">
+
+    <div class="text">
+        <p class="medium">הכלים שלנו</p>
+        <h2>מודיעין פיננסי בקוד פתוח</h2>
+        <p class="big">
+            מסד נתונים בלעדי ופתוח לציבור ומרכז את כל נתוני שוק הפנסיה
+        </p>
+
+        <div class="grid-display">
+            <div>
+                <h3 class="title">כותרת דוח</h3>
+
+                <img src="{{$sheet_image}}" alt="דוח ראשון" />
+            </div>
+
+            <div>
+                <h3 class="title">כותרת דוח</h3>
+
+                <img src="{{$sheet_image}}" alt="דוח ראשון" />
+            </div>
+
+            <div>
+                <h3 class="title">כותרת דוח</h3>
+
+                <img src="{{$sheet_image}}" alt="דוח ראשון" />
+            </div>
+        </div>
+    </div>
+</section>

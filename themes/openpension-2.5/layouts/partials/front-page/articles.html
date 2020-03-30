@@ -1,0 +1,37 @@
+{{ $article_image := resources.Get "images/article.png" }}
+{{ $articles_image := resources.Get "images/articles.png" }}
+
+<section class="articles" style="background-image:url({{$articles_image}})">
+
+    <div class="text">
+        <p class="medium">כתבות</p>
+        <h2>הדוחות המעמיקים בתחום</h2>
+        <p class="big">
+            מידע שמאפשר לעיתונאים ואקטיביסטים לספר את הסיפור המלא
+        </p>
+
+        <div class="grid-display">
+            <div>
+                <h3 class="title">כותרת כתבה</h3>
+                <p class="sub-title">שאול אמסטרדמסקי, 16 מרץ 2020</p>
+
+                <img src="{{$article_image}}" alt="דוח ראשון" class="bordered" />
+            </div>
+
+            <div>
+                <h3 class="title">כותרת כתבה</h3>
+                <p class="sub-title">שאול אמסטרדמסקי, 16 מרץ 2020</p>
+
+                <img src="{{$article_image}}" alt="דוח ראשון" class="bordered" />
+            </div>
+
+            <div>
+                <h3 class="title">כותרת כתבה</h3>
+                <p class="sub-title">שאול אמסטרדמסקי, 16 מרץ 2020</p>
+
+                <img src="{{$article_image}}" alt="דוח ראשון" class="bordered" />
+            </div>
+        </div>
+    </div>
+
+</section>
