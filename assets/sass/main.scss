@@ -6,7 +6,7 @@ body {
     font-family: 'Arimo', sans-serif;
 }
 
-#header {
+header {
 
     .wrapper {
         background: $header-bg;
@@ -21,4 +21,24 @@ body {
             font-size: 2em;
         }
     }
+}
+
+nav {
+   .wrapper {
+       display: flex;
+       justify-content: center;
+       padding-top: 1em;
+       box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+
+       ul {
+           li {
+               display: inline-block;
+               color: $navigation-color;
+               font-weight: bold;
+               font-size: 1.5em;
+               padding-right: 1.5em;
+               padding-left: 1.5em;
+           }
+       }
+   }
 }
