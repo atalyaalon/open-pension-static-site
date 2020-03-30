@@ -20,7 +20,10 @@
 
     <body>
         {{ partial "navigation.html" (dict "image" $logo.Permalink ) }}
-        {{ partial "front-page/home.html" (dict "sheets" .Site.Data.sheets) }}
+
+        {{ $home_background := resources.Get "images/money-background.png" }}
+        {{ partial "front-page/home.html" (dict "image" $home_background.Permalink) }}
+
         {{ partial "footer.html" }}
 
         {{ $sheets_switcher := resources.Get "js/SheetSwitch.js" | resources.Minify | resources.Fingerprint }}
