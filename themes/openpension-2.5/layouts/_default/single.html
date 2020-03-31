@@ -2,8 +2,6 @@
 
 <head>
     <title>{{ .Site.Title }}</title>
-    {{ $bootstrap := resources.Get "sass/bootstrap.css" | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $bootstrap.Permalink }}">
 
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
@@ -21,7 +19,7 @@
 </head>
 
 <body>
-{{ partial "front-page/navigation.html" (dict "image" $logo.Permalink ) }}
+{{ partial "navigation.html" (dict "image" $logo.Permalink ) }}
 
 <div class="container {{.Params.class}}">
     <h1>{{ .Title }}</h1>
@@ -31,7 +29,7 @@
     </div>
 </div>
 
-{{ partial "front-page/footer.html" }}
+{{ partial "footer.html" }}
 </body>
 
 </html>

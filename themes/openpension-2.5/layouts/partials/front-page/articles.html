@@ -1,7 +1,7 @@
 {{ $article_image := resources.Get "images/article.png" }}
 {{ $articles_image := resources.Get "images/articles.png" }}
 
-<section class="articles" style="background-image:url({{$articles_image}})">
+<section class="articles" style="background-image:url({{$articles_image.Permalink}})">
     <a id="articles"></a>
     <div class="text">
         <p class="medium">כתבות</p>
@@ -15,21 +15,21 @@
                 <h3 class="title">כותרת כתבה</h3>
                 <p class="sub-title">שאול אמסטרדמסקי, 16 מרץ 2020</p>
 
-                <img src="{{$article_image}}" alt="דוח ראשון" class="bordered" />
+                <img src="{{$article_image.Permalink}}" alt="דוח ראשון" class="bordered" />
             </div>
 
             <div>
                 <h3 class="title">כותרת כתבה</h3>
                 <p class="sub-title">שאול אמסטרדמסקי, 16 מרץ 2020</p>
 
-                <img src="{{$article_image}}" alt="דוח ראשון" class="bordered" />
+                <img src="{{$article_image.Permalink}}" alt="דוח ראשון" class="bordered" />
             </div>
 
             <div>
                 <h3 class="title">כותרת כתבה</h3>
                 <p class="sub-title">שאול אמסטרדמסקי, 16 מרץ 2020</p>
 
-                <img src="{{$article_image}}" alt="דוח ראשון" class="bordered" />
+                <img src="{{$article_image.Permalink}}" alt="דוח ראשון" class="bordered" />
             </div>
         </div>
     </div>
