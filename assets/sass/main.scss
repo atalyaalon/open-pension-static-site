@@ -3,7 +3,7 @@
 body {
     font-size: 16px;
     font-family: 'Arimo', sans-serif;
-    background: #f0f8fd;
+    background: $background;
     margin: 0;
 }
 
@@ -20,6 +20,12 @@ header {
 
         .site-tittle {
             font-size: 2em;
+
+            a {
+                color: $header-color;
+                text-decoration: none;
+                font-weight: bold;
+            }
         }
     }
 }
@@ -41,6 +47,19 @@ nav {
                font-size: 1.5em;
                padding-right: 1.5em;
                padding-left: 1.5em;
+
+               a {
+                   text-decoration: none;
+                    color: $links-color;
+
+                   &:visited {
+                       color: $links-color;
+                   }
+
+                   &:hover {
+                       text-decoration: underline;
+                   }
+               }
            }
        }
    }
@@ -97,7 +116,7 @@ section {
                 border: none;
                 border-radius: 6px;
                 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-                background-color: #007ac1;
+                background-color: $button-bg;
                 font-size: 20px;
                 font-weight: bold;
                 font-stretch: normal;
@@ -105,7 +124,7 @@ section {
                 line-height: 1.15;
                 letter-spacing: normal;
                 text-align: center;
-                color: #fefeff;
+                color: $button-txt;
             }
         }
     }
@@ -119,8 +138,9 @@ section {
     div {
         padding: 1em 1em 1em 1.5em;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-        background-color: #ffffff;
+        background-color: $grid-item-bg;
         margin: 1.5em;
+        margin-right: 0;
     }
 
     .title {
@@ -148,7 +168,7 @@ section {
 }
 
 footer {
-    background-color: #add9ff;
+    background-color: $footer-bg;
     font-size: 1.25em;
     height: 4.5em;
     display: flex;
