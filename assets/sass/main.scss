@@ -148,6 +148,15 @@ section {
         color: $sheet-title;
         margin: 0;
         padding-bottom: 1em;
+
+        a {
+            color: $sheet-title;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     img {

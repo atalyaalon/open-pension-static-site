@@ -1,5 +1,4 @@
 {{ $tools_background := resources.Get "images/tools-background.png" }}
-{{ $sheet_image := resources.Get "images/first-sheet.png" }}
 
 <section class="tools" style="background-image:url({{$tools_background.Permalink}})">
     <a id="tools"></a>
@@ -11,23 +10,16 @@
         </p>
 
         <div class="grid-display">
-            <div>
-                <h3 class="title">כותרת דוח</h3>
 
-                <img src="{{$sheet_image.Permalink}}" alt="דוח ראשון" />
-            </div>
+            {{ range where .Pages "Params.type" "sheets" }}
+            {{ $sheet_image := resources.Get (printf "%s" .Params.image) }}
+                <div>
+                    <h3 class="title"><a href="{{.Permalink}}">{{ .Params.Title }}</a></h3>
 
-            <div>
-                <h3 class="title">כותרת דוח</h3>
+                    <img src="{{$sheet_image.Permalink}}" alt="דוח ראשון" />
+                </div>
+            {{end}}
 
-                <img src="{{$sheet_image.Permalink}}" alt="דוח ראשון" />
-            </div>
-
-            <div>
-                <h3 class="title">כותרת דוח</h3>
-
-                <img src="{{$sheet_image.Permalink}}" alt="דוח ראשון" />
-            </div>
         </div>
     </div>
 </section>

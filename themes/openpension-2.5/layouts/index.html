@@ -21,7 +21,8 @@
     <body>
         {{ partial "header.html" (dict "image" $logo.Permalink ) }}
         {{ partial "navigation.html" }}
-        {{ partial "front-page/main.html" }}
+        {{ partial "front-page/main.html" (dict "Pages" .Pages ) }}
+
         {{ partial "footer.html" }}
     </body>
 
