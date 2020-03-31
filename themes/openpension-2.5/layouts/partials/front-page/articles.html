@@ -1,4 +1,3 @@
-{{ $article_image := resources.Get "images/article.png" }}
 {{ $articles_image := resources.Get "images/articles.png" }}
 
 <section class="articles" style="background-image:url({{$articles_image.Permalink}})">
@@ -11,26 +10,17 @@
         </p>
 
         <div class="grid-display">
-            <div>
-                <h3 class="title">כותרת כתבה</h3>
-                <p class="sub-title">שאול אמסטרדמסקי, 16 מרץ 2020</p>
 
-                <img src="{{$article_image.Permalink}}" alt="דוח ראשון" class="bordered" />
-            </div>
+            {{ range .Site.Data.articles }}
+            {{ $article_image := resources.Get (printf "%s" .image) }}
+            {{ $article_image := $article_image.Fit "800X800" }}
+                <div>
+                    <h3 class="title"><a href="{{ .url }}" target="_blank">{{ .title }}</a></h3>
+                    <p class="sub-title">{{ .repoter }}, {{ .date }}</p>
 
-            <div>
-                <h3 class="title">כותרת כתבה</h3>
-                <p class="sub-title">שאול אמסטרדמסקי, 16 מרץ 2020</p>
-
-                <img src="{{$article_image.Permalink}}" alt="דוח ראשון" class="bordered" />
-            </div>
-
-            <div>
-                <h3 class="title">כותרת כתבה</h3>
-                <p class="sub-title">שאול אמסטרדמסקי, 16 מרץ 2020</p>
-
-                <img src="{{$article_image.Permalink}}" alt="דוח ראשון" class="bordered" />
-            </div>
+                    <img src="{{$article_image.Permalink}}" alt="דוח ראשון" class="bordered" />
+                </div>
+            {{ end }}
         </div>
     </div>
 
