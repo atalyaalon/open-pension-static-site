@@ -18,6 +18,11 @@ header {
         display: flex;
         align-items: center;
 
+        img {
+            max-width: 4em;
+            margin-left: 1em;
+        }
+
         .site-tittle {
             font-size: 2em;
 
